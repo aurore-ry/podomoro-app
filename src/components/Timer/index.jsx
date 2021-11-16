@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const Timer = () => {
+export const Timer = ({ title }) => {
   const [seconds, setSeconds] = useState(25 * 60);
   const [paused, setPaused] = useState(true);
 
@@ -29,6 +29,7 @@ export const Timer = () => {
 
   return (
     <>
+      <h3>{(title = "25 minutes focus, you can do it!")}</h3>
       {`${Math.floor(seconds / 60)}:${("00" + (seconds % 60)).slice(-2)}`}
       <button onClick={paused ? play : stop}>
         {paused ? "Start" : "Pause"}

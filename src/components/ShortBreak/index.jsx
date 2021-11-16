@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export const ShortBreak = () => {
+export const ShortBreak = ({ title }) => {
   const [shortBreak, setShortBreak] = useState(5 * 60);
   const [paused, setPaused] = useState(true);
 
@@ -30,6 +30,7 @@ export const ShortBreak = () => {
 
   return (
     <>
+      <h3>{(title = "5 minutes for break")}</h3>
       {`${Math.floor(shortBreak / 60)}:${("00" + (shortBreak % 60)).slice(-2)}`}
       <button onClick={paused ? play : stop}>
         {paused ? "Start" : "Pause"}

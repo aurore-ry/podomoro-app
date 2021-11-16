@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const LongBreak = () => {
+export const LongBreak = ({ title }) => {
   const [longBreak, setLongBreak] = useState(15 * 60);
   const [paused, setPaused] = useState(true);
 
@@ -29,6 +29,7 @@ export const LongBreak = () => {
 
   return (
     <>
+      <h3>{(title = "15 minutes for Break")}</h3>
       {`${Math.floor(longBreak / 60)}:${("00" + (longBreak % 60)).slice(-2)}`}
       <button onClick={paused ? play : stop}>
         {paused ? "Start" : "Pause"}
