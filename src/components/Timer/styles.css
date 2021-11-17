@@ -1,0 +1,26 @@
+h3 {
+  text-transform: uppercase;
+}
+
+.button {
+  width: 90px;
+  height: 32px;
+  color: rgb(139, 241, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #171717;
+  border: none;
+  border-radius: 25px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(26, 25, 25);
+  /* box-shadow: 10px 5px 5px rgba(139, 241, 255, 0.541); */
+  color: rgb(166, 255, 255);
+}
+#tiktak {
+  color: rgb(139, 241, 255);
+  font-size: 62px;
+  font-weight: bold;
+}
