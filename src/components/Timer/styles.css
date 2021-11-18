@@ -19,8 +19,37 @@ h3 {
   /* box-shadow: 10px 5px 5px rgba(139, 241, 255, 0.541); */
   color: rgb(166, 255, 255);
 }
-#tiktak {
+
+.timer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.time-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.time-update-buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.time-formatted {
+  margin: 10px;
   color: rgb(139, 241, 255);
-  font-size: 62px;
+  font-size: 72px;
   font-weight: bold;
 }

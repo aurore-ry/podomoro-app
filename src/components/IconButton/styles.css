@@ -1,0 +1,14 @@
+.icon-button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+}
