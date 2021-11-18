@@ -1,0 +1,46 @@
+#cards-container {
+  margin: 50px;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgb(31, 30, 30);
+  box-shadow: rgba(2, 2, 2, 0.81) 0px 20px 30px;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 8.5px solid rgb(139, 241, 255);
+  border-radius: 50%;
+  padding: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#pomodoro-card {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: rgb(37, 37, 37);
+  border: 3.5px solid rgb(139, 241, 255);
+  border-radius: 50%;
+}
+
+#shortBreak-card {
+  border: 1px solid green;
+}
+
+#longBreak-card {
+  border: 1px solid blue;
+}

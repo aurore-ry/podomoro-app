@@ -11,8 +11,10 @@ export const CardContainer = ({}) => {
   return (
     <>
       <div id="cards-container">
-        <div id="pomodoro-card">
-          <Timer />
+        <div className="circle">
+          <div id="pomodoro-card">
+            <Timer />
+          </div>
         </div>
         <div id="shortBreak-card">
           <ShortBreak />
