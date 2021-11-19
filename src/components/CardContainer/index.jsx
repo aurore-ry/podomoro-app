@@ -7,7 +7,7 @@ import { BreakTimeButton } from "../BreakTimeButton";
 import { Timer } from "../Timer";
 
 const BREAK_TIME_SECONDS_DEFAULT = 5 * 60;
-const BREAK_TIMES_SECONDS = [5 * 60, 10 * 60, 15 * 60];
+const BREAK_TIMES_SECONDS = [5 * 60, 10 * 60, 15 * 60, 20 * 60];
 
 export const CardContainer = () => {
   const [breakTimeSeconds, setBreakTimeSeconds] = useState(
@@ -22,6 +22,7 @@ export const CardContainer = () => {
   return (
     <>
       <div id="cards-container">
+        <h1 id="app-name">Yellow & Pomodoro</h1>
         <div className="circle">
           <div id="pomodoro-card">
             <Timer breakTimeSeconds={breakTimeSeconds} />
