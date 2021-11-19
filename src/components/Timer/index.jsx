@@ -8,7 +8,11 @@ import "./styles.css";
 
 const TIMER_SECONDS_DEFAULT = 25 * 60;
 
-export const Timer = ({ title = "Time to focus!", breakTimeSeconds }) => {
+export const Timer = ({
+  title = "Time to focus!",
+  breakTimeSeconds,
+  seconds,
+}) => {
   const {
     timeFormatted,
     timerState,
@@ -16,27 +20,52 @@ export const Timer = ({ title = "Time to focus!", breakTimeSeconds }) => {
     play,
     pause,
     stop,
-    // increment,
-    // decrement,
+    increment,
+    decrement,
   } = usePomodoroTimer({
-    seconds: TIMER_SECONDS_DEFAULT,
     breakTimeSeconds,
-    // increment,
-    // decrement,
+    seconds: TIMER_SECONDS_DEFAULT,
   });
+
+  /* <div className="time-update-buttons" id="hide">
+          <IconButton>
+            {increment ? (
+              <Plus id="hide" onClick={increment} />
+            ) : (
+              <Plus onClick={increment} />
+            )}
+          </IconButton>
+          <IconButton>
+            <Minus onClick={decrement} />
+          </IconButton>
+        </div> */
 
   return (
     <div className="timer">
       <h3>{timerState}</h3>
       <div className="time-row">
-        <div className="time-update-buttons">
-          <IconButton>
-            <Plus />
-          </IconButton>
-          <IconButton>
-            <Minus />
-          </IconButton>
-        </div>
+        {isRunning ? (
+          <div className={"time-update-buttons hide"}>
+            <IconButton>
+              <Plus id="hide" onClick={increment} />
+
+              <Plus onClick={increment} />
+            </IconButton>
+            <IconButton>
+              <Minus onClick={decrement} />
+            </IconButton>
+          </div>
+        ) : (
+          <div className={"time-update-buttons"}>
+            <IconButton>
+              <Plus onClick={increment} />
+            </IconButton>
+            <IconButton>
+              <Minus onClick={decrement} />
+            </IconButton>
+          </div>
+        )}
+
         <p className="time-formatted">{timeFormatted}</p>
       </div>
       <div className="time-row">

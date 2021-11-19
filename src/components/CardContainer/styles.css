@@ -16,6 +16,26 @@
   box-shadow: rgba(2, 2, 2, 0.81) 0px 20px 30px;
 }
 
+#app-name {
+  background: #000000;
+  background: -webkit-linear-gradient(
+    to right,
+    #000000 50%,
+    #fff700 50%,
+    #ffee00 50%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #000000 50%,
+    #fff700 50%,
+    #ffee00 50%
+  );
+  background: linear-gradient(to right, #000000 50%, #fff700 50%, #ffee00 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .circle {
   width: 400px;
   height: 400px;

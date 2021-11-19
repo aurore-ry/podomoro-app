@@ -19,11 +19,11 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
   );
 
   const decrement = useCallback(() => {
-    setTimerSeconds((secondsD) => secondsD - 1);
+    setTimerSeconds((prevSeconds) => prevSeconds - 1);
   }, [setTimerSeconds]);
 
   const increment = useCallback(() => {
-    setTimerSeconds((secondsInc) => secondsInc + 1);
+    setTimerSeconds((prevSeconds) => prevSeconds + 1);
   }, [setTimerSeconds]);
 
   const play = useCallback(() => {
