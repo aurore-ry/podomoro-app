@@ -18,6 +18,14 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
     [timerSeconds]
   );
 
+  const decrement = useCallback(() => {
+    setTimerSeconds((secondsD) => secondsD - 1);
+  }, [setTimerSeconds]);
+
+  const increment = useCallback(() => {
+    setTimerSeconds((secondsInc) => secondsInc + 1);
+  }, [setTimerSeconds]);
+
   const play = useCallback(() => {
     if (intervalId != null) {
       return;
@@ -60,12 +68,14 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
       setBreakTime(false);
     }
   }, [
+    breakTime,
     breakTimeSeconds,
     intervalId,
     timerSeconds,
     pause,
     setTimerSeconds,
     setTimerState,
+    seconds,
   ]);
 
   return useMemo(
@@ -74,10 +84,22 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
       timeSeconds: timerSeconds,
       timerState,
       isRunning: intervalId != null,
+      decrement,
+      increment,
       play,
       pause,
       stop,
     }),
-    [intervalId, pause, play, stop, timeFormatted, timerSeconds, timerState]
+    [
+      decrement,
+      increment,
+      intervalId,
+      pause,
+      play,
+      stop,
+      timeFormatted,
+      timerSeconds,
+      timerState,
+    ]
   );
 };
