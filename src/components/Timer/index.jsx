@@ -9,12 +9,21 @@ import "./styles.css";
 const TIMER_SECONDS_DEFAULT = 25 * 60;
 
 export const Timer = ({ title = "Time to focus!", breakTimeSeconds }) => {
-  const { timeFormatted, timerState, isRunning, play, pause, stop } =
-    usePomodoroTimer({
-      // seconds: TIMER_SECONDS_DEFAULT,
-      seconds: 10,
-      breakTimeSeconds,
-    });
+  const {
+    timeFormatted,
+    timerState,
+    isRunning,
+    play,
+    pause,
+    stop,
+    // increment,
+    // decrement,
+  } = usePomodoroTimer({
+    seconds: TIMER_SECONDS_DEFAULT,
+    breakTimeSeconds,
+    // increment,
+    // decrement,
+  });
 
   return (
     <div className="timer">

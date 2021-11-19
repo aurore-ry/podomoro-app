@@ -7,7 +7,12 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  background-color: rgb(31, 30, 30);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(247, 255, 6, 1) 50%
+  );
   box-shadow: rgba(2, 2, 2, 0.81) 0px 20px 30px;
 }
 
@@ -18,7 +23,7 @@
   justify-content: center;
   align-items: center;
 
-  border: 8.5px solid rgb(139, 241, 255);
+  border: 8.5px solid white;
   border-radius: 50%;
   padding: 40px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -32,15 +37,17 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  background-color: rgb(37, 37, 37);
-  border: 3.5px solid rgb(139, 241, 255);
+  background-color: rgb(7, 7, 7);
+  border: 3.5px solid rgb(255, 255, 255);
   border-radius: 50%;
 }
 
-#shortBreak-card {
-  border: 1px solid green;
-}
+#breaks-buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
 
-#longBreak-card {
-  border: 1px solid blue;
+  width: 400px;
+  height: 80px;
+
+  gap: 15px;
 }
