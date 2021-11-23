@@ -27,19 +27,6 @@ export const Timer = ({
     seconds: TIMER_SECONDS_DEFAULT,
   });
 
-  /* <div className="time-update-buttons" id="hide">
-          <IconButton>
-            {increment ? (
-              <Plus id="hide" onClick={increment} />
-            ) : (
-              <Plus onClick={increment} />
-            )}
-          </IconButton>
-          <IconButton>
-            <Minus onClick={decrement} />
-          </IconButton>
-        </div> */
-
   return (
     <div className="timer">
       <h3>{timerState}</h3>
