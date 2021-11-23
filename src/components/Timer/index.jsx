@@ -31,18 +31,7 @@ export const Timer = ({
     <div className="timer">
       <h3>{timerState}</h3>
       <div className="time-row">
-        {isRunning ? (
-          <div className={"time-update-buttons hide"}>
-            <IconButton>
-              <Plus id="hide" onClick={increment} />
-
-              <Plus onClick={increment} />
-            </IconButton>
-            <IconButton>
-              <Minus onClick={decrement} />
-            </IconButton>
-          </div>
-        ) : (
+        {!isRunning && (
           <div className={"time-update-buttons"}>
             <IconButton>
               <Plus onClick={increment} />
@@ -52,7 +41,6 @@ export const Timer = ({
             </IconButton>
           </div>
         )}
-
         <p className="time-formatted">{timeFormatted}</p>
       </div>
       <div className="time-row">
