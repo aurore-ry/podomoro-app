@@ -6,6 +6,8 @@ import "./styles.css";
 import { BreakTimeButton } from "../BreakTimeButton";
 import { Timer } from "../Timer";
 
+import { Circle, Square, Triangle } from "react-feather";
+
 const BREAK_TIME_SECONDS_DEFAULT = 5 * 60;
 const BREAK_TIMES_SECONDS = [5 * 60, 10 * 60, 15 * 60, 20 * 60];
 
@@ -22,7 +24,11 @@ export const CardContainer = () => {
   return (
     <>
       <div id="cards-container">
-        <h1 id="app-name">Yellow & Pomodoro</h1>
+        <div id="app-squid">
+          <Circle className="squid" />
+          <Triangle className="squid" />
+          <Square className="squid" />
+        </div>
         <div className="circle">
           <div id="pomodoro-card">
             <Timer breakTimeSeconds={breakTimeSeconds} />

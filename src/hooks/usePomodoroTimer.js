@@ -2,12 +2,14 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { formatSecondsAsMinutesSeconds } from "../utils/formatSecondsAsMinutesSeconds";
 
 const ONE_SECOND_MS = 1 * 1000;
+// const soundAlert = "../sound/squid_game_doll_song.mp3";
 
 export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
   const [breakTime, setBreakTime] = useState(false);
   const [timerSeconds, setTimerSeconds] = useState(seconds);
   const [timerState, setTimerState] = useState("Set time and start");
   const [intervalId, setIntervalId] = useState(null);
+  // const [isTimesUpModalOpen, setIsTimesUpModalOpen] = useState(false);
 
   const onTimerUpdate = useCallback(() => {
     setTimerSeconds((prevSeconds) => prevSeconds - 1);
@@ -59,6 +61,7 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
       setTimerState("Break time");
       setTimerSeconds(breakTimeSeconds);
       setBreakTime(true);
+      // setIsTimesUpModalOpen(true);
     }
 
     if (timerSeconds <= 0 && breakTime) {
@@ -75,6 +78,7 @@ export const usePomodoroTimer = ({ seconds, breakTimeSeconds }) => {
     pause,
     setTimerSeconds,
     setTimerState,
+    // setIsTimesUpModalOpen,
     seconds,
   ]);
 

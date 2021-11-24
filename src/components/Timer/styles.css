@@ -5,19 +5,19 @@ h3 {
 .button {
   width: 90px;
   height: 32px;
-  color: #f7ff06;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid #f7ff06;
+  border: 1px solid rgb(255, 0, 0);
   border-radius: 25px;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: rgb(255, 238, 0);
+  background-color: rgba(255, 255, 255, 0.637);
   /* box-shadow: 10px 5px 5px rgba(139, 241, 255, 0.541); */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 0, 0);
   font-weight: bold;
   font-weight: bolder;
   border: 1px solid white;
@@ -52,7 +52,7 @@ h3 {
 
 .time-formatted {
   margin: 10px;
-  color: #f7ff06;
+  color: rgb(255, 255, 255);
   font-size: 72px;
   font-weight: bold;
 }

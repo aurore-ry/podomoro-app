@@ -11,31 +11,23 @@
     270deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 50%,
-    rgba(247, 255, 6, 1) 50%
+    rgb(255, 0, 0) 50%
   );
   box-shadow: rgba(2, 2, 2, 0.81) 0px 20px 30px;
 }
 
-#app-name {
-  background: #000000;
-  background: -webkit-linear-gradient(
-    to right,
-    #000000 50%,
-    #fff700 50%,
-    #ffee00 50%
-  );
-  background: -moz-linear-gradient(
-    to right,
-    #000000 50%,
-    #fff700 50%,
-    #ffee00 50%
-  );
-  background: linear-gradient(to right, #000000 50%, #fff700 50%, #ffee00 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#app-squid {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
 }
 
+.squid {
+  width: 65px;
+  height: 65px;
+
+  color: white;
+}
 .circle {
   width: 400px;
   height: 400px;
